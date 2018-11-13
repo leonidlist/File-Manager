@@ -17,7 +17,7 @@ namespace FileManager
             Length = length;
         }
 
-        public void DrawTetField(int x, int y)
+        public void DrawTextField(int x, int y)
         {
             Console.SetCursorPosition(x, y);
             Console.BackgroundColor = Config.TextBoxBackgroundColor;
@@ -33,7 +33,7 @@ namespace FileManager
         {
             int _x = x;
 
-            DrawTetField(x, y);
+            DrawTextField(x, y);
 
             Console.SetCursorPosition(x, y);
             Console.CursorVisible = true;
@@ -60,7 +60,7 @@ namespace FileManager
                         continue;
 
                     builder.Remove(builder.Length - 1, 1);
-                    DrawTetField(x, y);
+                    DrawTextField(x, y);
 
                     Console.SetCursorPosition(x, y);
                     Console.Write(builder);
